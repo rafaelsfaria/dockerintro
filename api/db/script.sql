@@ -1,12 +1,12 @@
-CREATE DATABASE IF NOT EXISTS programadorabordo;
-USE programadorabordo;
+CREATE DATABASE IF NOT EXISTS supergeeks;
+USE supergeeks;
 
-CREATE TABLE IF NOT EXISTS products (
+CREATE TABLE IF NOT EXISTS projects (
   id INT(11) AUTO_INCREMENT,
   name VARCHAR(255),
-  price DECIMAL(10, 2),
+  people TINYINT(255),
   PRIMARY KEY (id)
 );
 
-INSERT INTO products VALUE(0, 'Curso Front-end especialista', 2500);
-INSERT INTO products VALUE(0, 'Curso JS Fullstack', 900);
+INSERT INTO projects VALUE(0, 'Projeto ambiental', 5);
+INSERT INTO projects VALUE(0, 'Projeto coleta', 4);

@@ -2,28 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Docker | Programador a Bordo</title>
-  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
+  <title>Docker</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
   <?php
-    $result = file_get_contents("http://node-container:9001/products");
-    $products = json_decode($result);
+    $content = file_get_contents("http://node-container:9001/projects");
+    $projects = json_decode($content);
   ?>
   
   <div class="container">
     <table class="table">
       <thead>
         <tr>
-          <th>Produto</th>
-          <th>Preço</th>
+          <th>Projetos</th>
+          <th>Pessoas</th>
         </tr>
       </thead>
       <tbody>
-        <?php foreach($products as $product): ?>
+        <?php foreach($projects as $project): ?>
           <tr>
-            <td><?php echo $product->name; ?></td>
-            <td><?php echo $product->price; ?></td>
+            <td><?php echo $project->name; ?></td>
+            <td><?php echo $project->people; ?></td>
           </tr>
         <?php endforeach; ?>
       </tbody>

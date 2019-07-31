@@ -6,24 +6,29 @@ const app = express();
 const connection = mysql.createConnection({
   host: 'mysql-container',
   user: 'root',
-  password: 'programadorabordo',
-  database: 'programadorabordo'
+  password: 'rafaelfaria',
+  database: 'supergeeks',
 });
 
-connection.connect();
+connection.connect((err) => {
+  if (err) {
+    throw err;
+  }
+});
 
-app.get('/products', function(req, res) {
-  connection.query('SELECT * FROM products', function (error, results) {
+app.get('/projects', (req, res) => {
+
+  connection.query('SELECT * FROM projects', (error, results) => {
 
     if (error) { 
       throw error
     };
 
-    res.send(results.map(item => ({ name: item.name, price: item.price })));
+    res.send(results.map(project => ({ name: project.name, people: project.people })));
   });
 });
 
 
-app.listen(9001, '0.0.0.0', function() {
+app.listen(9001, '0.0.0.0', () => {
   console.log('Listening on port 9001');
-})
+});

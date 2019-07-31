@@ -1,22 +1,20 @@
 {
-  "name": "docker-intro-api",
+  "name": "apinodejs",
   "version": "1.0.0",
-  "description": "Programador a bordo",
+  "description": "api com nodejs e nodemon para desenvolvimento",
   "main": "index.js",
   "scripts": {
-    "test": "test",
-    "start": "nodemon ./src/index"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/index.js"
   },
-  "keywords": [
-    "Docker"
-  ],
-  "author": "Ayrton Teshima",
+  "author": "Rafael Faria",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^1.18.10"
+    "nodemon": "^1.19.1"
   },
   "dependencies": {
-    "express": "^4.16.4",
-    "mysql": "^2.16.0"
+    "express": "^4.17.1",
+    "mysql": "^2.17.1",
+    "save": "^2.4.0"
   }
 }

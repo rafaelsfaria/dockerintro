@@ -1,2 +1,2 @@
-FROM mysql
-ENV MYSQL_ROOT_PASSWORD programadorabordo
+FROM mysql:5.7
+ENV MYSQL_ROOT_PASSWORD rafaelfaria
