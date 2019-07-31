@@ -1,2 +1,2 @@
-FROM mysql:5.7
+FROM mysql
 ENV MYSQL_ROOT_PASSWORD rafaelfaria

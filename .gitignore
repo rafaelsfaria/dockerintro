@@ -1,2 +1,3 @@
 api/db/data
 node_modules
+docker-compose.yml
